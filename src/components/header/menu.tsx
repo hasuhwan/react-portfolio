@@ -9,7 +9,7 @@ export default function Menu() {
             key={menu}
             className={`menu  font-emphasizeEN ${
               idx !== MenuArr.length - 1 ? "mr-10" : null
-            } text-menu hover:cursor-pointer hover:text-darkgreyColor`}
+            } text-menu hover:cursor-pointer text-whiteColor hover:drop-shadow-whiteColor `}
           >
             {menu}
           </button>

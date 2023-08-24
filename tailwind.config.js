@@ -8,19 +8,24 @@ module.exports = {
         whiteColor: "#FFFFFF",
         blackColor: "#000000",
         orangeColor: "#E8A744",
-        darkgreyColor: "#374151",
+        mainBgColor: "#191919",
+        bodyBgColor: "#3b413f",
         redColor: "#E52222",
         blueColor: "#5275F0",
         greenColor: "#5FCFA0",
+        purpleColor: "#7E21CF",
+        silverColor: "#C0C0C0",
       },
       fontSize: {
+        top: ["60px", { fontWeight: "900" }],
         menu: ["20px", { fontWeight: "600" }],
         title: ["40px", { fontWeight: "900" }],
-        text: ["20px", { fontWeight: "400" }],
+        medium: ["35px", { fontWeight: "600" }],
+        textBold: ["25px", { fontWeight: "600" }],
+        text: ["20px"],
       },
       fontFamily: {
         emphasizeEN: ["Monoton"],
-        emphasizeKO: ["Orbit"],
       },
       dropShadow: {
         whiteColor: ["0 0 5px #fff", "0 0 10px #fff", "0 0 21px #FFFFFF"],
@@ -28,6 +33,46 @@ module.exports = {
         redColor: ["0 0 5px #fff", "0 0 10px #fff", "0 0 21px #E52222"],
         blueColor: ["0 0 5px #fff", "0 0 10px #fff", "0 0 21px #5275F0"],
         greenColor: ["0 0 5px #fff", "0 0 10px #fff", "0 0 21px #5FCFA0"],
+        purpleColor: ["0 0 5px #fff", "0 0 10px #fff", "0 0 21px #7E21CF"],
+      },
+      backgroundImage: {
+        neon: "url('/src/img/bg-neon.png')",
+        city: "url('/src/img/bg-city3.png')",
+      },
+      animation: {
+        fliker: "fliker 3s ease-in-out 2 both",
+      },
+      keyframes: {
+        fliker: {
+          "0%": {
+            color: "#FFFFFF",
+            textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 21px #FFFFFF",
+          },
+          "80%": {
+            color: "#FFFFFF",
+            textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 21px #FFFFFF",
+          },
+          "81%": { color: "#000000", textShadow: "none" },
+          "94%": { color: "#000000", textShadow: "none" },
+          "95%": {
+            color: "#FFFFFF",
+            textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 21px #FFFFFF",
+          },
+          "96%": { color: "#000000", textShadow: "none" },
+          "97%": {
+            color: "#FFFFFF",
+            textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 21px #FFFFFF",
+          },
+          "98%": {
+            color: "#FFFFFF",
+            textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 21px #FFFFFF",
+          },
+          "99%": { color: "#000000", textShadow: "none" },
+          "100%": {
+            color: "#FFFFFF",
+            textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 21px #FFFFFF",
+          },
+        },
       },
     },
   },

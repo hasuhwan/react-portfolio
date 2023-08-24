@@ -1,10 +1,11 @@
 import Title from "../title";
-import { changeTailwind } from "../../util/utilFunc";
-
+import { useMemo } from "react";
+import { containerCssData } from "../common/commonCssData";
 export default function Archiving() {
+  const color = useMemo(() => "greenColor", []);
   return (
-    <div className="introduce w-full flex flex-col items-center ">
-      <Title title="Archiving" color={changeTailwind("green")} />
+    <div className={containerCssData}>
+      <Title title="Archiving" color={color} />
     </div>
   );
 }
