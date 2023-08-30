@@ -1,15 +1,19 @@
 import { FaArrowUp } from "react-icons/fa";
-import { useState, useEffect, useCallback } from "react";
-
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { debounce } from "lodash";
 export default function ScrollToTopButton() {
   const [showBtn, setShowBtn] = useState(false);
-  const onShowHandle = useCallback(() => {
-    if (window.scrollY > 400) {
-      setShowBtn(true);
-    } else {
-      setShowBtn(false);
-    }
-  }, []);
+  const onShowHandle = useMemo(
+    () =>
+      debounce(() => {
+        if (window.scrollY > 400) {
+          setShowBtn(true);
+        } else {
+          setShowBtn(false);
+        }
+      }, 500),
+    []
+  );
   const scrollToTopHandle = useCallback(() => {
     window.scrollTo({
       top: 0,
