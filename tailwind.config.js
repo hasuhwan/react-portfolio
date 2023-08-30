@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   safelist: [{ pattern: /bg-|border-|drop-shadow/ }],
@@ -23,6 +24,8 @@ module.exports = {
         medium: ["35px", { fontWeight: "600" }],
         textBold: ["25px", { fontWeight: "600" }],
         text: ["20px"],
+        textSmall: ["18px"],
+        textSmallBold: ["18px", { fontWeight: "600" }],
       },
       fontFamily: {
         emphasizeEN: ["Monoton"],
@@ -35,10 +38,7 @@ module.exports = {
         greenColor: ["0 0 5px #fff", "0 0 10px #fff", "0 0 21px #5FCFA0"],
         purpleColor: ["0 0 5px #fff", "0 0 10px #fff", "0 0 21px #7E21CF"],
       },
-      backgroundImage: {
-        neon: "url('/src/img/bg-neon.png')",
-        city: "url('/src/img/bg-city3.png')",
-      },
+
       animation: {
         fliker: "fliker 3s ease-in-out 2 both",
       },

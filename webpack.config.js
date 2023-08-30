@@ -17,9 +17,18 @@ module.exports = (env, argv) => {
     devServer: {
       port: 3000,
       hot: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+      static: {
+        directory: path.join(__dirname, "dist"), // 프로젝트 루트 디렉토리 설정
+      },
     },
     resolve: {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
+      alias: {
+        "@images": path.resolve(__dirname, "./src/img"),
+      },
     },
     module: {
       rules: [
@@ -30,7 +39,21 @@ module.exports = (env, argv) => {
         {
           test: /.css?$/,
           exclude: [],
-          use: ["style-loader", "css-loader", "postcss-loader"],
+          use: [
+            "style-loader",
+            { loader: "css-loader", options: { url: false } },
+            "postcss-loader",
+          ],
+        },
+        {
+          test: /\.(png|jpe?g|gif|svg|webp)$/i,
+          use: {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              outputPath: "img/", // 이미지가 복사될 디렉토리 설정
+            },
+          },
         },
       ],
     },

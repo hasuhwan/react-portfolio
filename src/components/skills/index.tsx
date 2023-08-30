@@ -18,7 +18,7 @@ export default function Skills() {
             <div className="grid gap-4 border-2 rounded-lg py-3 px-3">
               {skillData[skillGradeData[0]].map((data) => {
                 return (
-                  <div className="flex items-center">
+                  <div key={data.body} className="flex items-center">
                     {data.icon}
                     <span className=" text-textBold">{data.body}</span>
                   </div>
