@@ -28,9 +28,10 @@ export default function ProjectContent(props: IpropsValue) {
         <div className="w-1/2 h-[500px] justify-center items-start ">
           <div>
             <Slider {...settings}>
-              {props.project.image.map((image) => {
+              {props.project.image.map((image, idx) => {
                 return (
                   <img
+                    key={idx}
                     src={image}
                     alt="webtoon"
                     className="object-contain w-full h-[450px] "

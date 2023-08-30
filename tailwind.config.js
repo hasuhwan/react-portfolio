@@ -41,6 +41,7 @@ module.exports = {
 
       animation: {
         fliker: "fliker 3s ease-in-out 2 both",
+        dropDown: "dropDown .2s ease",
       },
       keyframes: {
         fliker: {
@@ -72,6 +73,10 @@ module.exports = {
             color: "#FFFFFF",
             textShadow: "0 0 5px #fff, 0 0 10px #fff, 0 0 21px #FFFFFF",
           },
+        },
+        dropDown: {
+          "0%": { transform: "translateY(-100%) " },
+          "100%": { transform: "translateY(0) " },
         },
       },
     },

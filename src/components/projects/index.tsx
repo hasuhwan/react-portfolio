@@ -14,11 +14,12 @@ export default function Projects() {
       {projectListArr.map((key, idx) => {
         return (
           <Contents
+            key={key}
             color={color}
             direction="left"
             project={idx !== projectListArr.length - 1 ? true : false}
           >
-            <ProjectContent key={key} project={projectObj[key]} />
+            <ProjectContent project={projectObj[key]} />
           </Contents>
         );
       })}

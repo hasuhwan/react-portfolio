@@ -1,6 +1,7 @@
 import Header from "../header";
 import { useMemo } from "react";
 import bgCity from "./../../img/bg-city.png";
+import ScrollToTopButton from "./scrollToTopButton";
 export default function Layout(props: { children: React.ReactNode }) {
   const containerStyle = useMemo(() => {
     return {
@@ -17,6 +18,7 @@ export default function Layout(props: { children: React.ReactNode }) {
         <div className="h-[100px]"></div>
         {props.children}
       </main>
+      <ScrollToTopButton />
     </div>
   );
 }
