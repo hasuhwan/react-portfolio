@@ -49,8 +49,8 @@ const projectObj: IprojectsListValue = {
     ],
     info: [
       ["주요 기능", "네이버 웹툰으로 링크, 웹툰 정보 노출"],
-      ["GitHub", "https://github.com/hasuhwan/webtoon-flutter"],
-      ["Frontend", "Dart", "Flutter"],
+      ["GitHub", "github.com/hasuhwan/webtoon-flutter"],
+      ["Frontend", "Dart, Flutter"],
     ],
   },
   sns: {
@@ -65,7 +65,7 @@ const projectObj: IprojectsListValue = {
     ],
     info: [
       ["주요 기능", "팔로잉, 상대방 글 리트윗, 댓글 작성, 회원가입 및 로그인"],
-      ["GitHub", "https://github.com/hasuhwan/next-nodebird"],
+      ["GitHub", "github.com/hasuhwan/next-nodebird"],
       [
         "Frontend",
         "JavaScript, Next.js, React.js, styled Components, Redux, Ant Design",
@@ -97,7 +97,7 @@ const projectObj: IprojectsListValue = {
         "주요 기능",
         "습관 게시글 CRUD, 습관 인증하기, 후기 등록, 마이페이지 내 현황 확인, 북마크",
       ],
-      ["GitHub", "https://github.com/codestates-seb/66Challenge"],
+      ["GitHub", "github.com/codestates-seb/66Challenge"],
       [
         "Frontend",
         "TypeScript, React.js, Next.js, PWA, styled Components, Tailwind CSS, Redux, Chart.js",
@@ -118,7 +118,7 @@ const projectObj: IprojectsListValue = {
     ],
     info: [
       ["주요 기능", "회원가입, 로그인, 게시글 CRUD, 답변 CRUD 및 투표 기능"],
-      ["GitHub", "https://github.com/codestates-seb/seb41_pre_018"],
+      ["GitHub", "github.com/codestates-seb/seb41_pre_018"],
       ["Frontend", "HTML, CSS, Styled-Component, React, Redux, Javascript"],
       [
         "Backend",
@@ -136,7 +136,7 @@ const projectObj: IprojectsListValue = {
       "HTML 및 CSS로만 구성되어 있으며, 화면에 어떻게 렌더링 되는지 학습하게 된 프로젝트 입니다.",
     ],
     info: [
-      ["GitHub", "https://github.com/hasuhwan/kokoa-clone-2022"],
+      ["GitHub", "github.com/hasuhwan/kokoa-clone-2022"],
       ["Frontend", "HTML, CSS"],
     ],
   },

@@ -1,24 +1,27 @@
 import Title from "../title";
 import Contents from "../contents";
-import { useMemo } from "react";
+import { useMemo, forwardRef, ForwardedRef } from "react";
 
 import { containerCssData } from "../common/commonCssData";
 import { archivingDataArr, archivingDataObj } from "./archivingData";
 import MiddleDot from "./middleDot";
-export default function Archiving() {
+const Archiving = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
   const color = useMemo(() => "greenColor", []);
 
   return (
-    <div className={containerCssData}>
+    <div className={containerCssData} ref={ref}>
+      <div className="w-full h-[50px]"></div>
       <Title title="Archiving" color={color} />
-      <Contents color={color} direction="right">
-        <div className="w-full flex items-center justify-between">
+      <Contents color={color}>
+        <div className="w-full flex flex-col desktop:flex-row items-center justify-between">
           {archivingDataArr.map((keyword) => {
             const data = archivingDataObj[keyword];
             return (
-              <div
+              <a
+                href={data.link} // 이동하고자 하는 외부 페이지의 URL
+                rel="noopener noreferrer" // 보안을 위한 속성
                 key={keyword}
-                className="w-1/2 h-full flex flex-col items-center   "
+                className="w-full pb-8 desktop:w-1/2 desktop:pb-0  h-full flex flex-col items-center hover:cursor-pointer hover:drop-shadow-whiteColor   "
               >
                 <div className="flex justify-center items-center leading-none mb-6">
                   {data.icon}
@@ -38,11 +41,12 @@ export default function Archiving() {
                     })}
                   </ul>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
       </Contents>
     </div>
   );
-}
+});
+export default Archiving;

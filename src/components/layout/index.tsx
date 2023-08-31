@@ -1,11 +1,19 @@
 import Header from "../header";
+import Footer from "../footer";
 import { useMemo } from "react";
-import bgCity from "./../../img/bg-city.png";
+import bgSky from "./../../img/bg-sky.jpeg";
 import ScrollToTopButton from "./scrollToTopButton";
-export default function Layout(props: { children: React.ReactNode }) {
+interface IonMoveToElmentListValue {
+  [key: string]: () => void;
+}
+interface IpropsValue {
+  children: React.ReactNode;
+  onMoveToElmentList: IonMoveToElmentListValue;
+}
+export default function Layout(props: IpropsValue) {
   const containerStyle = useMemo(() => {
     return {
-      backgroundImage: `url('${bgCity}')`,
+      backgroundImage: `url('${bgSky}')`,
     };
   }, []);
   return (
@@ -13,12 +21,14 @@ export default function Layout(props: { children: React.ReactNode }) {
       className="layout w-full flex flex-col items-center  bg-center"
       style={containerStyle}
     >
-      <Header />
-      <main className="w-[1100px] flex flex-col items-center ">
+      <Header onMoveToElmentList={props.onMoveToElmentList} />
+      <main className="w-full desktop:w-[1100px] flex flex-col items-center ">
         <div className="h-[100px]"></div>
         {props.children}
       </main>
+      <Footer />
       <ScrollToTopButton />
     </div>
   );
 }
+export type { IonMoveToElmentListValue };

@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   safelist: [{ pattern: /bg-|border-|drop-shadow/ }],
   theme: {
+    screens: {
+      desktop: "1100px",
+    },
     extend: {
       colors: {
         whiteColor: "#FFFFFF",
@@ -40,7 +43,7 @@ module.exports = {
       },
 
       animation: {
-        fliker: "fliker 3s ease-in-out 2 both",
+        fliker: "fliker 3s ease-in-out 4 both",
         dropDown: "dropDown .2s ease",
       },
       keyframes: {

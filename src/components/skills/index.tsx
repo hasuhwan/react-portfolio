@@ -3,14 +3,15 @@ import Contents from "../contents";
 import { containerCssData } from "../common/commonCssData";
 import { useMemo } from "react";
 import { skillGradeData, skillData } from "./skillsData";
-
-export default function Skills() {
+import { forwardRef, ForwardedRef } from "react";
+const Skills = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
   const color = useMemo(() => "blueColor", []);
   return (
-    <div className={containerCssData}>
+    <div className={containerCssData} ref={ref}>
+      <div className="w-full h-[50px]"></div>
       <Title title="Skills" color={color} />
-      <Contents color={color} direction="left">
-        <div className="w-full flex gap-20 justify-center">
+      <Contents color={color}>
+        <div className="w-full flex flex-col desktop:flex-row  gap-20 justify-center">
           <div className="flex flex-col items-center">
             <h1 className=" text-medium mb-3 drop-shadow-blueColor ">
               {skillGradeData[0]}
@@ -51,4 +52,5 @@ export default function Skills() {
       </Contents>
     </div>
   );
-}
+});
+export default Skills;

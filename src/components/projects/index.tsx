@@ -1,22 +1,21 @@
 import Title from "../title";
 import Contents from "../contents";
-import { useMemo } from "react";
+import { useMemo, forwardRef, ForwardedRef } from "react";
 import { containerCssData } from "../common/commonCssData";
 import ProjectContent from "./projectContent";
 import { projectListArr, projectObj } from "./projectsData";
 
-export default function Projects() {
+const Projects = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
   const color = useMemo(() => "orangeColor", []);
   return (
-    <div className={containerCssData}>
+    <div className={containerCssData} ref={ref}>
+      <div className="w-full h-[50px]"></div>
       <Title title="Projects" color={color} />
-
       {projectListArr.map((key, idx) => {
         return (
           <Contents
             key={key}
             color={color}
-            direction="left"
             project={idx !== projectListArr.length - 1 ? true : false}
           >
             <ProjectContent project={projectObj[key]} />
@@ -25,4 +24,5 @@ export default function Projects() {
       })}
     </div>
   );
-}
+});
+export default Projects;

@@ -18,14 +18,14 @@ export default function ProjectContent(props: IpropsValue) {
   };
   return (
     <div className="flex flex-col w-full h-full justify-between items-center py-">
-      <div className="w-full h-1/4 flex flex-col justify-center items-center mb-10">
+      <div className="w-full h-1/4 flex flex-col justify-center items-center mb-10 text-center">
         <h1 className="text-title drop-shadow-whiteColor mb-4">
           {props.project.title}
         </h1>
         <span className="text-textBold">{props.project.during}</span>
       </div>
-      <div className="flex w-full gap-6 justify-between items-center">
-        <div className="w-1/2 h-[500px] justify-center items-start ">
+      <div className="flex flex-col desktop:flex-row w-full gap-6 justify-between items-center">
+        <div className="w-full desktop:w-1/2 h-[500px] justify-center items-start ">
           <div>
             <Slider {...settings}>
               {props.project.image.map((image, idx) => {
@@ -41,7 +41,7 @@ export default function ProjectContent(props: IpropsValue) {
             </Slider>
           </div>
         </div>
-        <div className="w-1/2 h-full justify-start items-center flex flex-col">
+        <div className="w-full h-full justify-start items-center flex flex-col desktop:w-1/2">
           <div className="w-full flex flex-col items-start justify-center mb-6">
             {props.project.summary.map((str, idx) => {
               return (
@@ -57,19 +57,24 @@ export default function ProjectContent(props: IpropsValue) {
                 return (
                   <li key={idx} className="flex items-center">
                     <MiddleDot>
-                      <span className="text-textSmallBold mr-6 block w-1/5">
-                        {name}
-                      </span>
-                      {name === "GitHub" ? (
-                        <a
-                          className="block w-4/5 hover:drop-shadow-orangeColor"
-                          href={body}
-                        >
-                          {body}
-                        </a>
-                      ) : (
-                        <span className="block w-4/5">{body}</span>
-                      )}
+                      <div className="flex flex-col desktop:flex-row items-center justify-center w-full">
+                        <span className="text-textSmallBold  block w-full  desktop:w-1/5 desktop:mr-6">
+                          {name}
+                        </span>
+                        {name === "GitHub" ? (
+                          <a
+                            className="block hover:drop-shadow-orangeColor w-full desktop:w-4/5"
+                            href={`https://${body}`}
+                            rel="noopener noreferrer"
+                          >
+                            {body}
+                          </a>
+                        ) : (
+                          <span className="block w-full desktop:w-4/5">
+                            {body}
+                          </span>
+                        )}
+                      </div>
                     </MiddleDot>
                   </li>
                 );

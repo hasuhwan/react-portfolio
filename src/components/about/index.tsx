@@ -1,16 +1,17 @@
 import Title from "../title";
 import Contents from "../contents";
 import { containerCssData } from "../common/commonCssData";
-import { useMemo } from "react";
+import { forwardRef, useMemo, ForwardedRef } from "react";
 import { aboutData } from "./aboutData";
 
-export default function About() {
+const About = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
   const color = useMemo(() => "redColor", []);
   return (
-    <div className={containerCssData}>
+    <div className={containerCssData} ref={ref}>
+      <div className="w-full h-[50px]"></div>
       <Title title="About" color={color} />
-      <Contents color={color} direction="right">
-        <div className="grid grid-cols-3">
+      <Contents color={color}>
+        <div className="flex flex-col  desktop:grid grid-cols-3">
           {aboutData.map((data) => {
             return (
               <div
@@ -18,11 +19,9 @@ export default function About() {
                 className="flex leading-none items-center py-7"
               >
                 {data.icon}
-                <div>
-                  <h1 className="text-textBold text-whiteColor mb-2">
-                    {data.title}
-                  </h1>
-                  <span className="text-whiteColor text-text">{data.body}</span>
+                <div className="ml-2">
+                  <h1 className="text-textBold mb-2">{data.title}</h1>
+                  <span className="text-text">{data.body}</span>
                 </div>
               </div>
             );
@@ -31,4 +30,6 @@ export default function About() {
       </Contents>
     </div>
   );
-}
+});
+
+export default About;
