@@ -1,7 +1,7 @@
 import Header from "../header";
 import Footer from "../footer";
 import { useMemo } from "react";
-import bgSky from "./../../img/bg-sky.jpeg";
+import bgSky from "@images/bg-sky.jpeg";
 import ScrollToTopButton from "./scrollToTopButton";
 interface IonMoveToElmentListValue {
   [key: string]: () => void;

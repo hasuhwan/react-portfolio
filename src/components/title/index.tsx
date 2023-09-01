@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import bgNeon from "./../../img/bg-neon.png";
+import bgNeon from "@images/bg-neon.png";
 
 interface IpropsValue {
   title: string;
