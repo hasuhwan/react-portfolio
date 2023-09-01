@@ -27,7 +27,7 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       alias: {
-        "@images": path.resolve(__dirname, "./src/img"),
+        "@images": path.resolve(__dirname, "src/img"),
       },
     },
     module: {
@@ -51,7 +51,6 @@ module.exports = (env, argv) => {
             loader: "file-loader",
             options: {
               name: "[path][name].[ext]",
-              outputPath: "img/", // 이미지가 복사될 디렉토리 설정
             },
           },
         },
