@@ -11,7 +11,7 @@ const Skills = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
       <div className="w-full h-[50px]"></div>
       <Title title="Skills" color={color} />
       <Contents color={color}>
-        <div className="w-full flex flex-col desktop:flex-row  gap-20 justify-center">
+        <div className="w-full flex flex-col desktop:flex-row gap-6 desktop:gap-20 justify-center">
           <div className="flex flex-col items-center">
             <h1 className=" text-medium mb-3 drop-shadow-blueColor ">
               {skillGradeData[0]}

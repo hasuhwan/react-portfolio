@@ -18,7 +18,9 @@ export default function Title(props: IpropsValue) {
         className={` px-7 py-7  flex items-center justify-center rounded-lg leading-none border-2 border-${props.color} drop-shadow-${props.color}  bg-center text-center`}
         style={containerStyle}
       >
-        <h1 className={`neon-title  drop-shadow-${props.color}`}>
+        <h1
+          className={`text-title font-emphasizeEN  drop-shadow-${props.color}`}
+        >
           {props.title}
         </h1>
       </div>

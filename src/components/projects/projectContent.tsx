@@ -19,7 +19,7 @@ export default function ProjectContent(props: IpropsValue) {
   return (
     <div className="flex flex-col w-full h-full justify-between items-center py-">
       <div className="w-full h-1/4 flex flex-col justify-center items-center mb-10 text-center">
-        <h1 className="text-title drop-shadow-whiteColor mb-4">
+        <h1 className="text-mediumBold desktop:text-title drop-shadow-whiteColor mb-4">
           {props.project.title}
         </h1>
         <span className="text-textBold">{props.project.during}</span>

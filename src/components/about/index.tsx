@@ -19,7 +19,7 @@ const About = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
                 className="flex leading-none items-center py-7"
               >
                 {data.icon}
-                <div className="ml-2">
+                <div className="ml-4">
                   <h1 className="text-textBold mb-2">{data.title}</h1>
                   <span className="text-text">{data.body}</span>
                 </div>

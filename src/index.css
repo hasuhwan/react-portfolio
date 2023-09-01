@@ -89,9 +89,3 @@ body {
     @apply text-whiteColor;
   }
 }
-
-@layer components {
-  .neon-title {
-    @apply text-title font-emphasizeEN;
-  }
-}

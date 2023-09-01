@@ -1,7 +1,7 @@
 import { footerData } from "./footerData";
 export default function Footer() {
   return (
-    <div className="footer w-full flex flex-col gap-4  justify-center items-center  bg-mainBgColor  px-[5%]  py-[35px] ">
+    <div className="footer w-full flex flex-col gap-4  justify-center items-center  bg-mainBgColor  px-[5%]  py-[30px] border-t-2 drop-shadow-whiteColor ">
       <div className="flex gap-12 justify-center items-center">
         {footerData.map(([icon, link], idx) => {
           return (

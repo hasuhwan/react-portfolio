@@ -13,7 +13,7 @@ const Introduce = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
         <div className="flex flex-col items-center desktop:items-center text-center">
           {introduceTextArr.map((text) => {
             return (
-              <span key={text} className="contents-origin mb-2">
+              <span key={text} className=" desktop:text-text mb-2">
                 {text}
               </span>
             );

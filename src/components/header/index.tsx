@@ -34,7 +34,7 @@ export default function Header(props: IpropsValue) {
   return (
     <nav
       ref={extra}
-      className="header w-full flex flex-col  bg-mainBgColor  px-[5%]  py-4 fixed z-50 "
+      className="header w-full flex flex-col  bg-mainBgColor  px-[5%] border-b-2 drop-shadow-whiteColor  py-4 fixed z-50 "
     >
       <div className="w-full flex items-center justify-between relative">
         <h1

@@ -24,6 +24,7 @@ module.exports = {
         top: ["60px", { fontWeight: "900" }],
         menu: ["20px", { fontWeight: "600" }],
         title: ["40px", { fontWeight: "900" }],
+        mediumBold: ["35px", { fontWeight: "900" }],
         medium: ["35px", { fontWeight: "600" }],
         textBold: ["25px", { fontWeight: "600" }],
         text: ["20px"],
