@@ -1,3 +1,6 @@
+import portfolio1 from "@images/portfolio/portfolio1.png";
+import portfolio2 from "@images/portfolio/portfolio2.png";
+import portfolio3 from "@images/portfolio/portfolio3.png";
 import webtoon1 from "@images/webtoon/webtoon1.png";
 import webtoon2 from "@images/webtoon/webtoon2.png";
 import sns1 from "@images/sns/sns1.png";
@@ -22,6 +25,7 @@ import kakao5 from "@images/kakao/kakao5.png";
 import kakao6 from "@images/kakao/kakao6.png";
 
 const projectListArr: string[] = [
+  "portfolio",
   "webtoon",
   "sns",
   "challenge",
@@ -39,6 +43,25 @@ interface IprojectsListValue {
   [key: string]: IprojectValue;
 }
 const projectObj: IprojectsListValue = {
+  portfolio: {
+    image: [portfolio1, portfolio2, portfolio3],
+    title: "포트폴리오 웹사이트",
+    during: "2023.08 (1인)",
+    summary: [
+      "포트폴리오 용도로 제작한 웹사이트입니다. 보고 있는 이 웹사이트입니다.",
+      "React.js 기반 컴포넌트를 베이스로하여 제작한 웹사이트입니다.",
+      "어두운 밤하늘과 네온사인 간판을 통해 대조되는 모습을 표현하려고 했습니다.",
+    ],
+    info: [
+      [
+        "주요 기능",
+        "자기 소개, 인적 사항, 기술 스택, Github 및 Notion 링크, 프로젝트 경험",
+      ],
+      ["GitHub", "https://github.com/hasuhwan/react-portfolio"],
+      ["Frontend", "Typescript, React.js, Tailwind CSS"],
+      ["Deployment", "Vercel"],
+    ],
+  },
   webtoon: {
     image: [webtoon1, webtoon2],
     title: "오늘의 웹툰 리스트",
