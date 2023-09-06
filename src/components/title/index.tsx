@@ -25,8 +25,8 @@ export default function Title(props: IpropsValue) {
         </h1>
       </div>
       <div className="h-[50px] w-full flex justify-between px-8">
-        <div className="h-full w-[6px] bg-silverColor"></div>
-        <div className="h-full w-[6px] bg-silverColor"></div>
+        <div className="h-full w-[8px] bg-gradient-to-r from-silverColor via-whiteColor to-silverColor"></div>
+        <div className="h-full w-[8px] bg-gradient-to-r from-silverColor via-whiteColor to-silverColor"></div>
       </div>
     </div>
   );
