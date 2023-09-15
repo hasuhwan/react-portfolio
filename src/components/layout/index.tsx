@@ -23,7 +23,7 @@ export default function Layout(props: IpropsValue) {
     >
       <Header onMoveToElmentList={props.onMoveToElmentList} />
       <main className="w-full desktop:w-[1100px] flex flex-col items-center ">
-        <div className="h-[100px]"></div>
+        <div className="h-[50px]"></div>
         {props.children}
       </main>
       <Footer />

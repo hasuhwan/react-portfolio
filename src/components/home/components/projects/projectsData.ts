@@ -23,7 +23,7 @@ import kakao3 from "@images/kakao/kakao3.png";
 import kakao4 from "@images/kakao/kakao4.png";
 import kakao5 from "@images/kakao/kakao5.png";
 import kakao6 from "@images/kakao/kakao6.png";
-
+import { IprojectsListData } from "src/types";
 const projectListArr: string[] = [
   "portfolio",
   "webtoon",
@@ -32,17 +32,8 @@ const projectListArr: string[] = [
   "stackoverflow",
   "kakao",
 ];
-interface IprojectValue {
-  image: string[];
-  title: string;
-  during: string;
-  summary: string[];
-  info: string[][];
-}
-interface IprojectsListValue {
-  [key: string]: IprojectValue;
-}
-const projectObj: IprojectsListValue = {
+
+const projectObj: IprojectsListData = {
   portfolio: {
     image: [portfolio1, portfolio2, portfolio3],
     title: "포트폴리오 웹사이트",
@@ -166,5 +157,3 @@ const projectObj: IprojectsListValue = {
 };
 
 export { projectListArr, projectObj };
-
-export type { IprojectValue };

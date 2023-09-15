@@ -1,13 +1,11 @@
 import DesktopMenu from "./desktopMenu";
 import MobileMenu from "./mobileMenu";
 import { scrollToTopHandle } from "../common/utilFunc";
-import type { IonMoveToElmentListValue } from "../layout";
+import type { IheaderPropsValue } from "src/types";
 import { useCallback, useState, useEffect, useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-interface IpropsValue {
-  onMoveToElmentList: IonMoveToElmentListValue;
-}
-export default function Header(props: IpropsValue) {
+
+export default function Header(props: IheaderPropsValue) {
   const [menuOpen, setMenuOpen] = useState(false);
   const extra = useRef<HTMLElement>(null);
   const openHandle = useCallback((temp: boolean) => {
@@ -59,4 +57,3 @@ export default function Header(props: IpropsValue) {
     </nav>
   );
 }
-export type { IpropsValue };

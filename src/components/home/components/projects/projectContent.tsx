@@ -1,11 +1,8 @@
 import Slider from "react-slick";
 import MiddleDot from "../archiving/middleDot";
-import type { IprojectValue } from "./projectsData";
+import type { IprojectValue } from "src/types";
 
-interface IpropsValue {
-  project: IprojectValue;
-}
-export default function ProjectContent(props: IpropsValue) {
+export default function ProjectContent(props: IprojectValue) {
   const settings = {
     fade: true,
     arrows: false,
@@ -19,7 +16,11 @@ export default function ProjectContent(props: IpropsValue) {
   return (
     <div className="flex flex-col w-full h-full justify-between items-center py-">
       <div className="w-full h-1/4 flex flex-col justify-center items-center mb-10 text-center">
-        <h1 className="text-mediumBold desktop:text-title drop-shadow-whiteColor mb-4">
+        <h1
+          className={`text-mediumBold desktop:text-title ${
+            props.inView ? `drop-shadow-whiteColor` : null
+          } mb-4`}
+        >
           {props.project.title}
         </h1>
         <span className="text-textBold">{props.project.during}</span>
@@ -56,7 +57,7 @@ export default function ProjectContent(props: IpropsValue) {
               {props.project.info.map(([name, body], idx) => {
                 return (
                   <li key={idx} className="flex items-center">
-                    <MiddleDot>
+                    <MiddleDot inView={props.inView}>
                       <div className="flex flex-col desktop:flex-row items-center justify-center w-full">
                         <span className="text-textSmallBold  block w-full  desktop:w-1/5 desktop:mr-6">
                           {name}

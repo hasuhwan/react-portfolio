@@ -1,17 +1,9 @@
 import { SiNotion, SiGithub } from "react-icons/si";
-
+import type { IarchivingObjData } from "src/types";
 const archivingDataArr: string[] = ["GitHub", "Notion"];
 
-interface IdataValue {
-  icon: React.ReactNode;
-  link: string;
-  contents: string[];
-}
-interface IobjValue {
-  [key: string]: IdataValue;
-}
 const iconCss = "text-whiteColor text-medium drop-shadow-greenColor mr-4";
-const archivingDataObj: IobjValue = {
+const archivingDataObj: IarchivingObjData = {
   GitHub: {
     icon: <SiGithub className={iconCss} />,
     link: "https://github.com/hasuhwan",

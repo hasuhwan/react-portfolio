@@ -1,9 +1,6 @@
-import type { IpropsValue } from ".";
+import type { ImobilePropsValue } from "src/types";
 import { menuData } from "./headerData";
-interface ImobilePropsValue extends IpropsValue {
-  menuOpen: boolean;
-  openHandle: (temp: boolean) => void;
-}
+
 export default function MobileMenu(props: ImobilePropsValue) {
   return (
     <div

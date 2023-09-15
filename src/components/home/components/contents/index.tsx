@@ -1,13 +1,8 @@
 import { useMemo } from "react";
 import bgNeon from "@images/bg-neon.png";
+import type { IcontentsValue } from "src/types";
 
-interface IpropsValue {
-  children: React.ReactNode;
-  color: string;
-  project?: boolean;
-}
-
-export default function Contents(props: IpropsValue) {
+export default function Contents(props: IcontentsValue) {
   const containerStyle = useMemo(() => {
     return {
       backgroundImage: `url('${bgNeon}')`,
@@ -16,7 +11,13 @@ export default function Contents(props: IpropsValue) {
   return (
     <div className="flex flex-col w-[90%] desktop:max-w-[1000px] justify-center items-center">
       <div
-        className={`flex w-full justify-center items-center px-7 py-8 border rounded-lg bg-darkgreyColor border-${props.color} drop-shadow-${props.color}  bg-center`}
+        className={`flex w-full justify-center items-center px-7 py-8 ${
+          props.inView ? "border" : "border border-black"
+        } rounded-lg ${
+          props.inView
+            ? `border-${props.color} drop-shadow-${props.color}`
+            : null
+        }    bg-center`}
         style={containerStyle}
       >
         {props.children}

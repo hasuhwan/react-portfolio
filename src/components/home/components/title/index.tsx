@@ -1,12 +1,8 @@
 import { useMemo } from "react";
 import bgNeon from "@images/bg-neon.png";
+import type { ItitleValue } from "src/types";
 
-interface IpropsValue {
-  title: string;
-  color: string;
-}
-
-export default function Title(props: IpropsValue) {
+export default function Title(props: ItitleValue) {
   const containerStyle = useMemo(() => {
     return {
       backgroundImage: `url('${bgNeon}')`,
@@ -15,11 +11,17 @@ export default function Title(props: IpropsValue) {
   return (
     <div className="flex flex-col items-center justify-center">
       <div
-        className={` px-7 py-7  flex items-center justify-center rounded-lg leading-none border-2 border-${props.color} drop-shadow-${props.color}  bg-center text-center`}
+        className={` px-7 py-7  flex items-center justify-center rounded-lg leading-none ${
+          props.inView
+            ? `border-2 border-${props.color} drop-shadow-${props.color}`
+            : null
+        }   bg-center text-center`}
         style={containerStyle}
       >
         <h1
-          className={`text-title font-emphasizeEN  drop-shadow-${props.color}`}
+          className={`text-title font-emphasizeEN ${
+            props.inView ? `drop-shadow-${props.color}` : "text-blackColor"
+          } `}
         >
           {props.title}
         </h1>

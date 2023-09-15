@@ -16,23 +16,18 @@ import {
   SiDart,
   SiFlutter,
   SiNotion,
+  SiReactquery,
 } from "react-icons/si";
 import { iconCss } from "./skillsCss";
+import type { IskillData } from "src/types";
 const skillGradeData: string[] = [
   "Main",
   "Experience",
   "Version Control",
   "Communication",
 ];
-interface IskillDataArrValue {
-  icon: React.ReactNode;
-  body: string;
-}
-interface IskillDataValue {
-  [key: string]: IskillDataArrValue[];
-}
 
-const skillData: IskillDataValue = {
+const skillData: IskillData = {
   Main: [
     { icon: <AiOutlineHtml5 className={iconCss} />, body: "HTML" },
     { icon: <SiCss3 className={iconCss} />, body: "CSS" },
@@ -42,6 +37,7 @@ const skillData: IskillDataValue = {
     { icon: <SiNextdotjs className={iconCss} />, body: "Next.js" },
     { icon: <SiRedux className={iconCss} />, body: "Redux" },
     { icon: <SiReduxsaga className={iconCss} />, body: "ReduxSaga" },
+    { icon: <SiReactquery className={iconCss} />, body: "React Query" },
     { icon: <SiTailwindcss className={iconCss} />, body: "Tailwind CSS" },
     {
       icon: <SiStyledcomponents className={iconCss} />,

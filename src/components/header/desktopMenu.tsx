@@ -1,7 +1,7 @@
-import type { IpropsValue } from ".";
+import type { IheaderPropsValue } from "src/types";
 import { menuData } from "./headerData";
 
-export default function DesktopMenu(props: IpropsValue) {
+export default function DesktopMenu(props: IheaderPropsValue) {
   return (
     <div className="hidden desktop:flex menu-container  items-center ">
       {menuData.map((menu, idx) => {
