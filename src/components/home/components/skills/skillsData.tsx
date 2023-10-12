@@ -47,6 +47,7 @@ const skillData: IskillData = {
   Experience: [
     { icon: <SiDart className={iconCss} />, body: "Dart" },
     { icon: <SiFlutter className={iconCss} />, body: "Flutter" },
+    { icon: <FaReact className={iconCss} />, body: "React Native" },
   ],
   "Version Control": [
     { icon: <SiGit className={iconCss} />, body: "Git" },

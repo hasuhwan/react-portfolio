@@ -1,3 +1,6 @@
+import todolist1 from "@images/todolist/todolist1.png";
+import todolist2 from "@images/todolist/todolist2.png";
+import todolist3 from "@images/todolist/todolist3.png";
 import portfolio1 from "@images/portfolio/portfolio1.png";
 import portfolio2 from "@images/portfolio/portfolio2.png";
 import portfolio3 from "@images/portfolio/portfolio3.png";
@@ -25,6 +28,7 @@ import kakao5 from "@images/kakao/kakao5.png";
 import kakao6 from "@images/kakao/kakao6.png";
 import { IprojectsListData } from "src/types";
 const projectListArr: string[] = [
+  "todolist",
   "portfolio",
   "webtoon",
   "sns",
@@ -34,6 +38,22 @@ const projectListArr: string[] = [
 ];
 
 const projectObj: IprojectsListData = {
+  todolist: {
+    image: [todolist1, todolist2, todolist3],
+    title: "Todo List & Travel List",
+    during: "2023.10 (1인)",
+    summary: [
+      "React Native를 경험하기 위해서 진행한 프로젝트입니다.",
+      "Simulator를 사용하여 모바일 환경에서 개발을 진행했습니다.",
+      "처음 React Native를 사용하면서 웹 개발과 JSX문법의 차이를 숙달하게 되었고, CSS 또한 차이를 경험하게 되었습니다.",
+      "사용 라이브러리가 비교적 간단하여 직접적으로 운영체제에 따른 옵션 수정을 하지는 않았지만, 필요시 수정을 할 수 있다는 자신감을 얻게된 프로젝트라고 생각합니다.",
+    ],
+    info: [
+      ["주요 기능", "Todo list 및 Travel List CRUD"],
+      ["GitHub", "github.com/hasuhwan/workhardtravelhardapp"],
+      ["Frontend", "Typescript, React Native, Expo"],
+    ],
+  },
   portfolio: {
     image: [portfolio1, portfolio2, portfolio3],
     title: "포트폴리오 웹사이트",
@@ -48,7 +68,7 @@ const projectObj: IprojectsListData = {
         "주요 기능",
         "자기 소개, 인적 사항, 기술 스택, Github 및 Notion 링크, 프로젝트 경험",
       ],
-      ["GitHub", "https://github.com/hasuhwan/react-portfolio"],
+      ["GitHub", "github.com/hasuhwan/react-portfolio"],
       ["Frontend", "Typescript, React.js, Tailwind CSS"],
       ["Deployment", "Vercel"],
     ],
