@@ -1,3 +1,9 @@
+import xcom1 from "@images/xcom/xcom1.png";
+import xcom2 from "@images/xcom/xcom2.png";
+import xcom3 from "@images/xcom/xcom3.png";
+import xcom4 from "@images/xcom/xcom4.png";
+import xcom5 from "@images/xcom/xcom5.png";
+import xcom6 from "@images/xcom/xcom6.png";
 import todolist1 from "@images/todolist/todolist1.png";
 import todolist2 from "@images/todolist/todolist2.png";
 import todolist3 from "@images/todolist/todolist3.png";
@@ -28,6 +34,7 @@ import kakao5 from "@images/kakao/kakao5.png";
 import kakao6 from "@images/kakao/kakao6.png";
 import { IprojectsListData } from "src/types";
 const projectListArr: string[] = [
+  "xcom",
   "todolist",
   "portfolio",
   "webtoon",
@@ -38,6 +45,29 @@ const projectListArr: string[] = [
 ];
 
 const projectObj: IprojectsListData = {
+  xcom: {
+    image: [xcom1, xcom2, xcom3, xcom4, xcom5, xcom6],
+    title: "X.com cloning",
+    during: "2024.02 (1인)",
+    summary: [
+      "Next.js v14 App Router 방식이 주가 되어, 기능 습득을 위한 프로젝트 입니다.",
+      "백엔드 서버와 통신은 React-Query를 사용하였고, 컴포넌트간 상태관리는 Zustand를 사용했습니다.",
+      "폴더 구조에서 App Router의 약속된 방식으로 폴더를 구성하였습니다.",
+      "SNS 플랫폼 X.com을 클로닝한 프로젝트입니다. 인터넷 강의를 참고하여 제작하였으며, 다루지 않은 내용 또한 X.com을 참고하여 구현했습니다.",
+    ],
+    info: [
+      [
+        "주요 기능",
+        "회원가입, 로그인, 게시글 작성, 게시글 재게시, 게시들 답변, 좋아요, 팔로우, 실시간 메시지 채팅, 해시태그 추천",
+      ],
+      ["GitHub", "github.com/hasuhwan/h-com"],
+      [
+        "Frontend",
+        "Typescript, React.js, Next.js, React-Query, Zustand, Swiper, Module/CSS, dayjs",
+      ],
+    ],
+  },
+
   todolist: {
     image: [todolist1, todolist2, todolist3],
     title: "Todo List & Travel List",
